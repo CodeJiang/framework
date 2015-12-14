@@ -45,11 +45,3 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-
-#maven target
-.class
-target/
-.classpath
-logs/
-.settings
-.project

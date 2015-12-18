@@ -1,5 +1,7 @@
 package com.jiang.framework.socket;
 
+
+
 public class GameMessage {
 	/**Á¬½Ó*/
 	private Connection connection;
@@ -25,4 +27,5 @@ public class GameMessage {
 	public void setData(byte[] data) {
 		this.data = data;
 	}
+	
 }

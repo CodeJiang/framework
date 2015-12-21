@@ -7,6 +7,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import javax.annotation.PostConstruct;
+
 import com.jiang.framework.common.GameEventHandler;
 import com.jiang.framework.common.GameEvent;
 import com.jiang.framework.socket.GameMessage;
@@ -25,7 +27,8 @@ public class DisruptorServer {
 	EventHandler<GameEvent> handler = null;
 	RingBuffer<GameEvent> ringBuffer = null;
 	
-	private DisruptorServer(){
+	@PostConstruct
+	public void init(){
 		handler = new GameEventHandler();
         GameEventHandler[] gameEventHandler = new GameEventHandler[]{(GameEventHandler) handler};
         disruptor.handleEventsWith(gameEventHandler);

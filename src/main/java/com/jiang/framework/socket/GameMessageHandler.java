@@ -2,6 +2,7 @@ package com.jiang.framework.socket;
 
 
 import com.jiang.framework.core.GameCommandService;
+import com.jiang.framework.core.GameSocketServer;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -17,6 +18,15 @@ public class GameMessageHandler extends SimpleChannelInboundHandler<GameMessage>
 		}		
 	}
 	
+	@Override
+	public void channelActive(ChannelHandlerContext ctx) throws Exception {
+		GameSocketServer.channelGroup.add(ctx.channel());
+	};
+	
+	@Override
+	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+		GameSocketServer.channelGroup.remove(ctx.channel());
+	};	
 	@Override
 	public void channelRegistered(ChannelHandlerContext ctx) throws Exception{
 		Connection connection = new Connection();

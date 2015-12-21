@@ -5,6 +5,7 @@ import com.jiang.framework.util.RandomUtil;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
+import io.netty.util.ReferenceCountUtil;
 
 public class MessageObj {
 	/**ÏûÏ¢ID*/
@@ -37,6 +38,11 @@ public class MessageObj {
 	}
 	public void setBuffData(ByteBuf buffData) {
 		this.buffData = buffData;
+	}
+	
+	public void gc(){
+		ReferenceCountUtil.release(buffData);
+		buffData = null;
 	}
 	
 }

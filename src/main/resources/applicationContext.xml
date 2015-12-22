@@ -105,6 +105,9 @@ xsi:schemaLocation="
 	
 	<bean id="disruptorServer" class="com.jiang.framework.core.DisruptorServer"/>
 	<bean id="gameSocketServer" class="com.jiang.framework.core.GameSocketServer"/>
+	<bean id="baseDAO" class="com.jiang.framework.util.BaseDAO"/>
+	<bean id="baseGameDAO" class="com.jiang.framework.util.BaseGameDAO"/>
+	<bean id="BaseLogDAO" class="com.jiang.framework.util.BaseLogDAO"/>
 	
 	<!-- <bean id="InsertUpdateMethod" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
     	<property name="targetObject">  

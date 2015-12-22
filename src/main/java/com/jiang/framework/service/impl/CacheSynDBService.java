@@ -6,12 +6,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
 
-import com.cache.CacheSynDBService;
-import com.common.GameContext;
 import com.jiang.framework.dao.interfaces.IUpdate;
-import com.service.IBatchExcuteService;
+import com.jiang.framework.util.BaseGameDAO;
+import com.jiang.framework.util.BaseLogDAO;
 
 @Service
 public class CacheSynDBService {
@@ -29,7 +30,12 @@ public class CacheSynDBService {
 	private static Map<String, List<?>> fiveMinuteInsertCacheLogMap = new HashMap<String, List<?>>();
 	private static Map<String, List<?>> tenMinuteInsertCacheLogMap = new HashMap<String, List<?>>();
 	private static Map<String, List<?>> oneMinuteInsertCacheLogMap = new HashMap<String,List<?>>();
-
+	
+	@Resource
+	private BaseLogDAO baseLogDAO;
+	@Resource
+	private BaseGameDAO baseGameDAO;
+	
 	/**
 	 * ª∫¥Ê≥ı ºªØ
 	 * */
@@ -340,24 +346,22 @@ public class CacheSynDBService {
 				return;
 			}
 
-			IBatchExcuteService batchExcuteService = GameContext.getInstance().getServiceCollection().getBatchExcuteService();
-
 			for (List<?> objectList : dataList) {
 				batchExcuteService.batchInsert(objectList);
 			}
 		}
 
-		@Override
+		
 		public void insert_tenSecondData_log() {
 			synInsertLogData(CacheSynDBService.getAllAndClearLogCache_ten_second_insert());
 		}
 		
-		@Override
+		
 		public void insert_FiveMinuteData_log() {
 			synInsertLogData(CacheSynDBService.getAllAndClearLogCache_five_minute_insert());
 		}
 		
-		@Override
+		
 		public void insert_TenMinuteData_log() {
 			synInsertLogData(CacheSynDBService.getAllAndClearLogCache_ten_minute_insert());
 		}
@@ -367,7 +371,6 @@ public class CacheSynDBService {
 				return;
 			}
 
-			IBatchExcuteService batchExcuteService = GameContext.getInstance().getServiceCollection().getBatchExcuteService();
 			for (Set<IUpdate> objectList : dataList) {
 				batchExcuteService.batchUpdate(objectList);
 			}
@@ -378,14 +381,13 @@ public class CacheSynDBService {
 				return;
 			}
 
-			IBatchExcuteService batchExcuteService = GameContext.getInstance().getServiceCollection().getBatchExcuteService();
 
 			for (List<?> objectList : dataList) {
 				batchExcuteService.batchInsertLog(objectList);
 			}
 		}
 
-		@Override
+		
 		public void insert_OneMinuteData_Log() {
 			synInsertLogData(CacheSynDBService.getAllAndClearLogCache_OneMinuteInsert());
 			

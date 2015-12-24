@@ -24,7 +24,7 @@ public class GameSocketService {
 	
 	@PostConstruct
 	public void init(){
-		/**Íæ¼ÒIDºÍConnectionµÄÓ³Éä*/
+		/**çŽ©å®¶IDå’ŒConnectionçš„æ˜ å°„*/
 		playerIDConnection = new ConcurrentHashMap<Integer, Connection>(1000);
 		channelIDConnection = new ConcurrentHashMap<ChannelId, Connection>(1000);
 	}

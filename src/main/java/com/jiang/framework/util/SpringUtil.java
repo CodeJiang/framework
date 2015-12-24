@@ -17,6 +17,7 @@ public class SpringUtil {
 			entry.getValue().initBaseCache();
 			entry.getValue().initCache();
 		}
+		
 	}
 	
 	@SuppressWarnings("unchecked")

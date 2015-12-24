@@ -17,15 +17,15 @@ import com.jiang.framework.util.BaseLogDAO;
 @Service
 public class CacheSynDBService {
 	
-	/** ¶¨Ê±¸üĞÂ»º´æ-5·ÖÖÓ */
+	/** å®šæ—¶æ›´æ–°ç¼“å­˜-5åˆ†é’Ÿ */
 	private static Map<String, Set<IUpdate>> fiveMinuteUpdateOneCacheMap = new HashMap<String, Set<IUpdate>>();
 	private static Map<String, Set<IUpdate>> fiveMinuteUpdateTwoCacheMap = new HashMap<String, Set<IUpdate>>();
 	private static Map<String, Set<IUpdate>> fiveMinuteUpdateThreeCacheMap = new HashMap<String, Set<IUpdate>>();
 
-	/** ¶¨Ê±²åÈë»º´æ-10·ÖÖÓ*/
+	/** å®šæ—¶æ’å…¥ç¼“å­˜-10åˆ†é’Ÿ*/
 	private static Map<String, List<?>> tenMinuteInsertOneCacheMap = new HashMap<String, List<?>>();
 
-	/** ¶¨Ê±Ğ´ÈÕÖ¾  ×¢:ÈÕÖ¾¿â*/
+	/** å®šæ—¶å†™æ—¥å¿—  æ³¨:æ—¥å¿—åº“*/
 	private static Map<String, List<?>> tenSecondInsertCacheLogMap = new HashMap<String, List<?>>();
 	private static Map<String, List<?>> fiveMinuteInsertCacheLogMap = new HashMap<String, List<?>>();
 	private static Map<String, List<?>> tenMinuteInsertCacheLogMap = new HashMap<String, List<?>>();
@@ -37,7 +37,7 @@ public class CacheSynDBService {
 	private BaseGameDAO baseGameDAO;
 	
 	/**
-	 * »º´æ³õÊ¼»¯
+	 * ç¼“å­˜åˆå§‹åŒ–
 	 * */
 	public static void initCacheMap() {
 		initFiveMinuteOneCacheMap();
@@ -59,56 +59,56 @@ public class CacheSynDBService {
 	}
 
 	/**
-	 * Îå·ÖÖÓ»º´æ³õÊ¼»¯-¸üĞÂ
+	 * äº”åˆ†é’Ÿç¼“å­˜åˆå§‹åŒ–-æ›´æ–°
 	 * */
 	private static void initFiveMinuteOneCacheMap() {
 
 	}
 
 	/**
-	 * Îå·ÖÖÓ»º´æ³õÊ¼»¯-¸üĞÂ
+	 * äº”åˆ†é’Ÿç¼“å­˜åˆå§‹åŒ–-æ›´æ–°
 	 * */
 	public static void initFiveMinuteTwoCacheMap() {
 	}
 	
 	/**
-	 * Îå·ÖÖÓ»º´æ³õÊ¼»¯-¸üĞÂ
+	 * äº”åˆ†é’Ÿç¼“å­˜åˆå§‹åŒ–-æ›´æ–°
 	 * */
 	public static void initFiveMinuteThreeCacheMap() {
 		
 	}
 
 	/**
-	 * 10·ÖÖÓ»º´æ³õÊ¼»¯-ĞÂÔö
+	 * 10åˆ†é’Ÿç¼“å­˜åˆå§‹åŒ–-æ–°å¢
 	 * */
 	 public static void initTenMinuteCacheMap() {
 		 
 	 }
 
 	 /**
-	  * ÈÕÖ¾Îå·ÖÖÓ»º´æ³õÊ¼»¯-ĞÂÔö
-	  * ×¢:ÈÕÖ¾¿â
+	  * æ—¥å¿—äº”åˆ†é’Ÿç¼“å­˜åˆå§‹åŒ–-æ–°å¢
+	  * æ³¨:æ—¥å¿—åº“
 	  */
 	 private static void initFiveMinuteLogCacheMap() {
 		 
 	 }
 	 
 	 /**
-	 * ÈÕÖ¾10ÃëÖÓ»º´æ³õÊ¼»¯-ĞÂÔö
-	 * ×¢:ÈÕÖ¾¿â
+	 * æ—¥å¿—10ç§’é’Ÿç¼“å­˜åˆå§‹åŒ–-æ–°å¢
+	 * æ³¨:æ—¥å¿—åº“
 	 * */
 	private static void initTenSecondLogCacheMap(){
 
 	}
 	 
 	 /**
-	  * ÈÕÖ¾Ê®·ÖÖÓ»º´æ³õÊ¼»¯-ĞÂÔö
-	  * ×¢:ÈÕÖ¾¿â
+	  * æ—¥å¿—ååˆ†é’Ÿç¼“å­˜åˆå§‹åŒ–-æ–°å¢
+	  * æ³¨:æ—¥å¿—åº“
 	  */
 	 private static void initTenMinuteLogCacheMap() {}
 
 	 /**
-	  * »º´æÎå·ÖÖÓ»º´æÊı¾İ
+	  * ç¼“å­˜äº”åˆ†é’Ÿç¼“å­˜æ•°æ®
 	  * @param key
 	  * @return
 	  */
@@ -117,21 +117,21 @@ public class CacheSynDBService {
 	 }
 
 	 /**
-	  * »º´æÎå·ÖÖÓ»º´æÊı¾İ
+	  * ç¼“å­˜äº”åˆ†é’Ÿç¼“å­˜æ•°æ®
 	  */
 	 public static Set<IUpdate> getFromFiveUpdateTwoCache(String key) {
 		 return fiveMinuteUpdateTwoCacheMap.get(key);
 	 }
 	 
 	 /**
-	  * »º´æÎå·ÖÖÓ»º´æÊı¾İ
+	  * ç¼“å­˜äº”åˆ†é’Ÿç¼“å­˜æ•°æ®
 	  */
 	 public static Set<IUpdate> getFromFiveUpdateThreeCache(String key) {
 		 return fiveMinuteUpdateThreeCacheMap.get(key);
 	 }
 
 	 /**
-	  * »ñµÃÊ®·ÖÖÓ»º´æÊı¾İ
+	  * è·å¾—ååˆ†é’Ÿç¼“å­˜æ•°æ®
 	  * @param key	
 	  * @return
 	  */
@@ -140,8 +140,8 @@ public class CacheSynDBService {
 	 }
 
 	 /**
-	  * »ñµÃ10ÃëÖÓÈÕÖ¾»º´æÊı¾İ
-	  * ×¢:ÈÕÖ¾¿â
+	  * è·å¾—10ç§’é’Ÿæ—¥å¿—ç¼“å­˜æ•°æ®
+	  * æ³¨:æ—¥å¿—åº“
 	  */
 	 public static Object getFromTenSecondLogCache(String key) {
 		 return tenSecondInsertCacheLogMap.get(key);
@@ -151,24 +151,24 @@ public class CacheSynDBService {
 		 return oneMinuteInsertCacheLogMap.get(key);
 	 }
 	 /**
-	  * »ñµÃÎå·ÖÖÓÈÕÖ¾»º´æÊı¾İ
-	  * ×¢:ÈÕÖ¾¿â
+	  * è·å¾—äº”åˆ†é’Ÿæ—¥å¿—ç¼“å­˜æ•°æ®
+	  * æ³¨:æ—¥å¿—åº“
 	  */
 	 public static Object getFromFiveMinuteLogCache(String key) {
 		 return fiveMinuteInsertCacheLogMap.get(key);
 	 }
 	 
 	 /**
-	  * »ñµÃÊ®·ÖÖÓÈÕÖ¾»º´æÊı¾İ
-	  * ×¢:ÈÕÖ¾¿â
+	  * è·å¾—ååˆ†é’Ÿæ—¥å¿—ç¼“å­˜æ•°æ®
+	  * æ³¨:æ—¥å¿—åº“
 	  */
 	 public static Object getFromTenMinuteLogCache(String key) {
 		 return tenMinuteInsertCacheLogMap.get(key);
 	 }
 
 	 /**
-	  * »ñµÃµ±Ç°»º´æÖĞËùÓĞÊı¾İºó²¢Çå¿Õ-¸üĞÂ
-	  * @return µ±Ç°»º´æÖĞµÄËùÓĞÊı¾İ
+	  * è·å¾—å½“å‰ç¼“å­˜ä¸­æ‰€æœ‰æ•°æ®åå¹¶æ¸…ç©º-æ›´æ–°
+	  * @return å½“å‰ç¼“å­˜ä¸­çš„æ‰€æœ‰æ•°æ®
 	  */
 	 public static List<Set<IUpdate>> getAllAndClearCache_five_one_update() {
 		 synchronized (fiveMinuteUpdateOneCacheMap) {
@@ -182,8 +182,8 @@ public class CacheSynDBService {
 	 }
 
 	 /**
-	  * »ñµÃµ±Ç°»º´æÖĞËùÓĞÊı¾İºó²¢Çå¿Õ-¸üĞÂ
-	  * @return µ±Ç°»º´æÖĞµÄËùÓĞÊı¾İ
+	  * è·å¾—å½“å‰ç¼“å­˜ä¸­æ‰€æœ‰æ•°æ®åå¹¶æ¸…ç©º-æ›´æ–°
+	  * @return å½“å‰ç¼“å­˜ä¸­çš„æ‰€æœ‰æ•°æ®
 	  */
 	 public static List<Set<IUpdate>> getAllAndClearCache_five_two_update() {
 
@@ -198,8 +198,8 @@ public class CacheSynDBService {
 	 }
 	 
 	 /**
-	  * »ñµÃµ±Ç°»º´æÖĞËùÓĞÊı¾İºó²¢Çå¿Õ-¸üĞÂ
-	  * @return µ±Ç°»º´æÖĞµÄËùÓĞÊı¾İ
+	  * è·å¾—å½“å‰ç¼“å­˜ä¸­æ‰€æœ‰æ•°æ®åå¹¶æ¸…ç©º-æ›´æ–°
+	  * @return å½“å‰ç¼“å­˜ä¸­çš„æ‰€æœ‰æ•°æ®
 	  */
 	 public static List<Set<IUpdate>> getAllAndClearCache_five_three_update() {
 		 
@@ -228,8 +228,8 @@ public class CacheSynDBService {
 	 }
 
 	 /**
-	  * »ñµÃµ±Ç°ÈÕÖ¾»º´æÖĞËùÓĞÊı¾İºó²¢Çå¿Õ-ĞÂÔö(10ÃëÖÓ)
-	  * @return µ±Ç°»º´æÖĞµÄËùÓĞÊı¾İ
+	  * è·å¾—å½“å‰æ—¥å¿—ç¼“å­˜ä¸­æ‰€æœ‰æ•°æ®åå¹¶æ¸…ç©º-æ–°å¢(10ç§’é’Ÿ)
+	  * @return å½“å‰ç¼“å­˜ä¸­çš„æ‰€æœ‰æ•°æ®
 	  */
 	 public static List<List<?>> getAllAndClearLogCache_ten_second_insert() {
 
@@ -254,8 +254,8 @@ public class CacheSynDBService {
 		}
 	 }
 	 /**
-	  * »ñµÃµ±Ç°ÈÕÖ¾»º´æÖĞËùÓĞÊı¾İºó²¢Çå¿Õ-ĞÂÔö(Îå·ÖÖÓ)
-	  * @return µ±Ç°»º´æÖĞµÄËùÓĞÊı¾İ
+	  * è·å¾—å½“å‰æ—¥å¿—ç¼“å­˜ä¸­æ‰€æœ‰æ•°æ®åå¹¶æ¸…ç©º-æ–°å¢(äº”åˆ†é’Ÿ)
+	  * @return å½“å‰ç¼“å­˜ä¸­çš„æ‰€æœ‰æ•°æ®
 	  */
 	 public static List<List<?>> getAllAndClearLogCache_five_minute_insert() {
 
@@ -271,8 +271,8 @@ public class CacheSynDBService {
 	 }
 	 
 	 /**
-	  * »ñµÃµ±Ç°ÈÕÖ¾»º´æÖĞËùÓĞÊı¾İºó²¢Çå¿Õ-ĞÂÔö(Ê®·ÖÖÓ)
-	  * @return µ±Ç°»º´æÖĞµÄËùÓĞÊı¾İ
+	  * è·å¾—å½“å‰æ—¥å¿—ç¼“å­˜ä¸­æ‰€æœ‰æ•°æ®åå¹¶æ¸…ç©º-æ–°å¢(ååˆ†é’Ÿ)
+	  * @return å½“å‰ç¼“å­˜ä¸­çš„æ‰€æœ‰æ•°æ®
 	  */
 	 public static List<List<?>> getAllAndClearLogCache_ten_minute_insert() {
 		 
@@ -288,8 +288,8 @@ public class CacheSynDBService {
 	 }
 
 	 /**
-	  * »ñµÃµ±Ç°»º´æÖĞËùÓĞÊı¾İºó²¢Çå¿Õ-ĞÂÔö(Ê®·ÖÖÓ)
-	  * @return µ±Ç°»º´æÖĞµÄËùÓĞÊı¾İ
+	  * è·å¾—å½“å‰ç¼“å­˜ä¸­æ‰€æœ‰æ•°æ®åå¹¶æ¸…ç©º-æ–°å¢(ååˆ†é’Ÿ)
+	  * @return å½“å‰ç¼“å­˜ä¸­çš„æ‰€æœ‰æ•°æ®
 	  */
 	 public static List<List<?>> getAllAndClearCache_ten_one_insert() {
 

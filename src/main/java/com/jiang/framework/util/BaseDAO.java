@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import javax.annotation.Resource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
@@ -14,8 +13,6 @@ import org.springframework.jdbc.support.KeyHolder;
 
 public class BaseDAO {
 	
-	
-	@Resource
 	private JdbcTemplate jdbcTemplate;
 	
 	public int update(String sql){

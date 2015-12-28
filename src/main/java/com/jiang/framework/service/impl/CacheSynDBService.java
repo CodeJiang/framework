@@ -14,7 +14,6 @@ import com.jiang.framework.dao.interfaces.IUpdate;
 import com.jiang.framework.util.BaseGameDAO;
 import com.jiang.framework.util.BaseLogDAO;
 
-@Service
 public class CacheSynDBService {
 	
 	/** 定时更新缓存-5分钟 */
@@ -347,7 +346,7 @@ public class CacheSynDBService {
 			}
 
 			for (List<?> objectList : dataList) {
-				batchExcuteService.batchInsert(objectList);
+				//batchExcuteService.batchInsert(objectList);
 			}
 		}
 
@@ -372,7 +371,7 @@ public class CacheSynDBService {
 			}
 
 			for (Set<IUpdate> objectList : dataList) {
-				batchExcuteService.batchUpdate(objectList);
+				//batchExcuteService.batchUpdate(objectList);
 			}
 		}
 		
@@ -383,7 +382,7 @@ public class CacheSynDBService {
 
 
 			for (List<?> objectList : dataList) {
-				batchExcuteService.batchInsertLog(objectList);
+				//batchExcuteService.batchInsertLog(objectList);
 			}
 		}
 

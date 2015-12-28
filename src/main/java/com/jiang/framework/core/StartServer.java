@@ -9,10 +9,10 @@ public class StartServer {
 	
 	
 	public static void start() throws InterruptedException{
-		//初始化spring
+		GameConfigInitService.getInstance().init();
+		
 		SpringUtil.init();
 		
-		//socket放在最后启动
 		GameSocketServer gameSocketServer = SpringUtil.getObject(GameSocketServer.class);		
 		gameSocketServer.start();
 		

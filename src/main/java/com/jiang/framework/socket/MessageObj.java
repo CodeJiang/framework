@@ -8,9 +8,7 @@ import io.netty.buffer.ByteBufAllocator;
 import io.netty.util.ReferenceCountUtil;
 
 public class MessageObj {
-	/**消息ID*/
 	private int msgID;
-	/**数据*/
 	private ByteBuf buffData;
 	
 	public int getMsgID() {

@@ -17,7 +17,6 @@ import com.jiang.framework.socket.ServerInitializer;
 
 public class GameSocketServer {
 	
-	/**默认是单线程*/
 	public static ChannelGroup channelGroup = new DefaultChannelGroup(new DefaultEventExecutor());
 	private ServerBootstrap serverBootstrap = null;
 	private Channel channel = null;
@@ -46,7 +45,7 @@ public class GameSocketServer {
 	}
 	
 	public void stop(){
-		//关闭所有的channel
+		//锟截憋拷锟斤拷锟叫碉拷channel
 		channelGroup.close();
 		channel.close();
 	}

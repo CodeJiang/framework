@@ -45,7 +45,7 @@ public class GameSocketServer {
 	}
 	
 	public void stop(){
-		//�ر����е�channel
+		
 		channelGroup.close();
 		channel.close();
 	}

@@ -11,7 +11,7 @@ import com.jiang.framework.service.IBaseService;
 public class SpringUtil {
 	private static ApplicationContext context = null;
 	public static void init(){
-		context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		context = new ClassPathXmlApplicationContext("applicationContext*.xml");
 		Map<String,IBaseService> map = context.getBeansOfType(IBaseService.class);
 		for(Entry<String, IBaseService> entry : map.entrySet()){
 			entry.getValue().initBaseCache();

@@ -18,6 +18,14 @@ public class BaseLogDAO {
 	@Resource(name="jdbcTemplateLog")
 	private JdbcTemplate jdbcTemplate;
 	
+	public JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
+
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
 	public int update(String sql){
 		int result = 0;
 		try{

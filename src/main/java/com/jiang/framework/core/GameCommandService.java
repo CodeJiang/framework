@@ -22,7 +22,7 @@ public class GameCommandService {
 			}catch(GameException ge){
 				command.executFail(ge);
 			}catch(Exception e){
-				LogUtil.error("Ö´ÐÐÖ¸ÁîÒì³£");
+				LogUtil.error("æœªçŸ¥å¼‚å¸¸",e);
 			}
 			
 		}

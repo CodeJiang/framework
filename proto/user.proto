@@ -1,0 +1,13 @@
+option java_package="com.jiang.framework.message";
+option java_outer_classname="UserProto";
+
+message C_USER_LOGIN{
+	optional string stie=1;
+	optional string username=2;
+	optional string key=3; //万能key 用作一键登录不参与加密
+	optional int32 time=4; //时间戳(秒);
+	optional string sign=5; //加密之后得到的sign
+}
+
+message S_USER_LOGIN{ 
+}

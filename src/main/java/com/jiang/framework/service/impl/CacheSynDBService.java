@@ -12,10 +12,12 @@ import javax.annotation.Resource;
 
 
 
+
 import org.springframework.stereotype.Service;
 
 import com.jiang.framework.dao.interfaces.IInsertV2;
 import com.jiang.framework.dao.interfaces.IUpdate;
+import com.jiang.framework.util.LogUtil;
 
 @Service
 public class CacheSynDBService {
@@ -325,15 +327,18 @@ public class CacheSynDBService {
 		
 		
 	public void update_fiveOneData() {
+		LogUtil.info("cal this method1");
 		synUpdateData(getAllAndClearCache_five_one_update());
 	}
 		
 		
 	public void update_fiveTwoData() {
+		LogUtil.info("cal this method2");
 		synUpdateData(getAllAndClearCache_five_two_update());
 	}
 
 	public void update_fiveThreeData() {
+		LogUtil.info("cal this method3");
 		synUpdateData(getAllAndClearCache_five_three_update());
 	}
 		

@@ -14,4 +14,52 @@ xsi:schemaLocation="
        http://www.springframework.org/schema/aop 
        http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
        
+        
+    <bean id="UpdateDBFiveMinuteOne" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+    	<property name="targetObject" ref="cacheSynDBService" />    
+    	<property name="targetMethod" value="update_fiveOneData" />  <!-- 要执行的方法名称 -->  
+	</bean>
+	
+	<bean id="CronTriggerFiveMinuteOne" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean" >
+    	<property name="jobDetail" ref="UpdateDBFiveMinuteOne"></property>  
+    	<property name="cronExpression" value="0 0/5 * * * ?"></property>
+    	  
+	</bean>
+	
+	 <bean id="UpdateDBFiveMinuteTwo" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+    	<property name="targetObject" ref="cacheSynDBService" />    
+    	<property name="targetMethod" value="update_fiveTwoData" />  <!-- 要执行的方法名称 -->  
+	</bean>
+	
+	<bean id="CronTriggerFiveMinuteTwo" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean" >
+    	<property name="jobDetail" ref="UpdateDBFiveMinuteTwo"></property>  
+    	<property name="cronExpression" value="5 1/5 * * * ?"></property>
+    	  
+	</bean>
+	
+	 <bean id="UpdateDBFiveMinuteThree" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+    	<property name="targetObject" ref="cacheSynDBService" />    
+    	<property name="targetMethod" value="update_fiveThreeData" />  <!-- 要执行的方法名称 -->  
+	</bean>
+	
+	<bean id="CronTriggerFiveMinuteThree" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean" >
+    	<property name="jobDetail" ref="UpdateDBFiveMinuteThree"></property>  
+    	<property name="cronExpression" value="15 2/5 * * * ?"></property>
+    	  
+	</bean>
+	
+	 
+    
+    
+	<bean id="SpringJobSchedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" destroy-method="destroy" >  
+    	<property name="triggers">  
+        	<list>  
+            	<ref bean="CronTriggerFiveMinuteOne"/>
+            	<ref bean="CronTriggerFiveMinuteTwo"/>
+            	<ref bean="CronTriggerFiveMinuteThree"/>
+        	</list>  
+    	</property>
+    	<property name="configLocation" value="classpath:quartz.properties" />  
+	</bean>
+       
 </beans>

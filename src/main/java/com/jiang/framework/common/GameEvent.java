@@ -4,7 +4,6 @@ import com.jiang.framework.socket.GameMessage;
 import com.lmax.disruptor.EventFactory;
 
 public class GameEvent {
-	/**ÓÎÏ·ÏûÏ¢*/
 	private GameMessage gameMessage;
 	public GameMessage getGameMessage() {
 		return gameMessage;

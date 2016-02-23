@@ -55,6 +55,7 @@ public class DisruptorServer {
     		@Override
     		public Thread newThread(Runnable r) {
     			Thread t = new Thread(tg,r,"Disruptor_"+num.getAndIncrement());
+    			
     			return t;
     		}
     		

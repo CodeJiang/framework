@@ -1,6 +1,7 @@
 package com.jiang.framework.core;
 
 import io.netty.bootstrap.ServerBootstrap;
+import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
@@ -33,6 +34,7 @@ public class GameSocketServer {
         	serverBootstrap.option(ChannelOption.TCP_NODELAY,true);
         	serverBootstrap.option(ChannelOption.SO_BACKLOG, 1000);
         	serverBootstrap.option(ChannelOption.SO_KEEPALIVE, true);
+        	serverBootstrap.option(ChannelOption.ALLOCATOR, new PooledByteBufAllocator(true));
             
         	channel = serverBootstrap.bind(Config.gamePort).sync().channel();
         	channel.closeFuture().sync();

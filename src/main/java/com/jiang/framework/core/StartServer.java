@@ -13,6 +13,8 @@ public class StartServer {
 		
 		SpringUtil.init();
 		
+		GameCommandService.init();
+		
 		GameSocketServer gameSocketServer = SpringUtil.getObject(GameSocketServer.class);		
 		gameSocketServer.start();
 		

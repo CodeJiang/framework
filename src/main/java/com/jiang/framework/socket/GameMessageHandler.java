@@ -1,6 +1,7 @@
 package com.jiang.framework.socket;
 
 
+
 import com.jiang.framework.core.GameCommandService;
 import com.jiang.framework.core.GameSocketServer;
 
@@ -14,6 +15,7 @@ public class GameMessageHandler extends SimpleChannelInboundHandler<GameMessage>
 	protected void messageReceived(ChannelHandlerContext ctx, GameMessage gameMessage) throws Exception {
 		Connection conn = ctx.attr(key).get();
 		if(conn != null){
+			gameMessage.setConnection(conn);
 			GameCommandService.executeCommand(gameMessage);
 		}		
 	}
@@ -31,7 +33,11 @@ public class GameMessageHandler extends SimpleChannelInboundHandler<GameMessage>
 	public void channelRegistered(ChannelHandlerContext ctx) throws Exception{
 		Connection connection = new Connection();
 		connection.setChannel(ctx.channel());
-		 
 		ctx.attr(key).set(connection);;
+	}
+	
+	@Override
+	public void exceptionCaught(ChannelHandlerContext ctx, Throwable t){
+		t.printStackTrace();
 	} 
 }

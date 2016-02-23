@@ -1,9 +1,8 @@
 option java_package="com.jiang.framework.message";
 option java_outer_classname="MessageProto";
-
-message messageEnum{
+message Message{
 	enum MessageID{
-		C_USER_LOGIN=10001;
-		S_USER_LOGIN=10002;
-	}
+	C_USER_LOGIN = 10001;
+	S_USER_LOGIN = 10002;
+}
 }

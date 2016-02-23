@@ -1,7 +1,5 @@
 package com.jiang.framework.socket;
 
-import com.jiang.framework.util.CommonUtil;
-import com.jiang.framework.util.RandomUtil;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
@@ -20,13 +18,10 @@ public class MessageObj {
 	
 	public MessageObj(int msgID, byte[] data){
 		this.msgID = msgID;
-		byte discard = (byte) RandomUtil.getRandomNum(1, 5);
-		byte[] discardByte = CommonUtil.getDiscardByte(discard);
-		int length = 4+discard+1+data.length;
-		buffData = ByteBufAllocator.DEFAULT.buffer(length);
+		int length = 4+data.length;
+		//加1024只是测试
+		buffData = ByteBufAllocator.DEFAULT.directBuffer(length + 1024);
 		buffData.writeInt(length);
-		buffData.writeByte(discard);
-		buffData.writeBytes(discardByte);
 		buffData.writeInt(msgID);
 		buffData.writeBytes(data);
 				
@@ -39,7 +34,7 @@ public class MessageObj {
 	}
 	
 	public void gc(){
-		ReferenceCountUtil.release(buffData);
+		//ReferenceCountUtil.release(buffData);
 		buffData = null;
 	}
 	

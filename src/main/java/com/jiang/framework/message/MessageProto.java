@@ -8,30 +8,30 @@ public final class MessageProto {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface messageEnumOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:messageEnum)
+  public interface MessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Message)
       com.google.protobuf.MessageOrBuilder {
   }
   /**
-   * Protobuf type {@code messageEnum}
+   * Protobuf type {@code Message}
    */
-  public static final class messageEnum extends
+  public static final class Message extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:messageEnum)
-      messageEnumOrBuilder {
-    // Use messageEnum.newBuilder() to construct.
-    private messageEnum(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:Message)
+      MessageOrBuilder {
+    // Use Message.newBuilder() to construct.
+    private Message(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private messageEnum(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private Message(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final messageEnum defaultInstance;
-    public static messageEnum getDefaultInstance() {
+    private static final Message defaultInstance;
+    public static Message getDefaultInstance() {
       return defaultInstance;
     }
 
-    public messageEnum getDefaultInstanceForType() {
+    public Message getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -41,7 +41,7 @@ public final class MessageProto {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private messageEnum(
+    private Message(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -77,33 +77,33 @@ public final class MessageProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.jiang.framework.message.MessageProto.internal_static_messageEnum_descriptor;
+      return com.jiang.framework.message.MessageProto.internal_static_Message_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.jiang.framework.message.MessageProto.internal_static_messageEnum_fieldAccessorTable
+      return com.jiang.framework.message.MessageProto.internal_static_Message_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.jiang.framework.message.MessageProto.messageEnum.class, com.jiang.framework.message.MessageProto.messageEnum.Builder.class);
+              com.jiang.framework.message.MessageProto.Message.class, com.jiang.framework.message.MessageProto.Message.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<messageEnum> PARSER =
-        new com.google.protobuf.AbstractParser<messageEnum>() {
-      public messageEnum parsePartialFrom(
+    public static com.google.protobuf.Parser<Message> PARSER =
+        new com.google.protobuf.AbstractParser<Message>() {
+      public Message parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new messageEnum(input, extensionRegistry);
+        return new Message(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<messageEnum> getParserForType() {
+    public com.google.protobuf.Parser<Message> getParserForType() {
       return PARSER;
     }
 
     /**
-     * Protobuf enum {@code messageEnum.MessageID}
+     * Protobuf enum {@code Message.MessageID}
      */
     public enum MessageID
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -159,7 +159,7 @@ public final class MessageProto {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return com.jiang.framework.message.MessageProto.messageEnum.getDescriptor().getEnumTypes().get(0);
+        return com.jiang.framework.message.MessageProto.Message.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final MessageID[] VALUES = values();
@@ -181,7 +181,7 @@ public final class MessageProto {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:messageEnum.MessageID)
+      // @@protoc_insertion_point(enum_scope:Message.MessageID)
     }
 
     private void initFields() {
@@ -220,53 +220,53 @@ public final class MessageProto {
       return super.writeReplace();
     }
 
-    public static com.jiang.framework.message.MessageProto.messageEnum parseFrom(
+    public static com.jiang.framework.message.MessageProto.Message parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.jiang.framework.message.MessageProto.messageEnum parseFrom(
+    public static com.jiang.framework.message.MessageProto.Message parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.jiang.framework.message.MessageProto.messageEnum parseFrom(byte[] data)
+    public static com.jiang.framework.message.MessageProto.Message parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.jiang.framework.message.MessageProto.messageEnum parseFrom(
+    public static com.jiang.framework.message.MessageProto.Message parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.jiang.framework.message.MessageProto.messageEnum parseFrom(java.io.InputStream input)
+    public static com.jiang.framework.message.MessageProto.Message parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.jiang.framework.message.MessageProto.messageEnum parseFrom(
+    public static com.jiang.framework.message.MessageProto.Message parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static com.jiang.framework.message.MessageProto.messageEnum parseDelimitedFrom(java.io.InputStream input)
+    public static com.jiang.framework.message.MessageProto.Message parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static com.jiang.framework.message.MessageProto.messageEnum parseDelimitedFrom(
+    public static com.jiang.framework.message.MessageProto.Message parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static com.jiang.framework.message.MessageProto.messageEnum parseFrom(
+    public static com.jiang.framework.message.MessageProto.Message parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static com.jiang.framework.message.MessageProto.messageEnum parseFrom(
+    public static com.jiang.framework.message.MessageProto.Message parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -275,7 +275,7 @@ public final class MessageProto {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.jiang.framework.message.MessageProto.messageEnum prototype) {
+    public static Builder newBuilder(com.jiang.framework.message.MessageProto.Message prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -287,25 +287,25 @@ public final class MessageProto {
       return builder;
     }
     /**
-     * Protobuf type {@code messageEnum}
+     * Protobuf type {@code Message}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:messageEnum)
-        com.jiang.framework.message.MessageProto.messageEnumOrBuilder {
+        // @@protoc_insertion_point(builder_implements:Message)
+        com.jiang.framework.message.MessageProto.MessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.jiang.framework.message.MessageProto.internal_static_messageEnum_descriptor;
+        return com.jiang.framework.message.MessageProto.internal_static_Message_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.jiang.framework.message.MessageProto.internal_static_messageEnum_fieldAccessorTable
+        return com.jiang.framework.message.MessageProto.internal_static_Message_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.jiang.framework.message.MessageProto.messageEnum.class, com.jiang.framework.message.MessageProto.messageEnum.Builder.class);
+                com.jiang.framework.message.MessageProto.Message.class, com.jiang.framework.message.MessageProto.Message.Builder.class);
       }
 
-      // Construct using com.jiang.framework.message.MessageProto.messageEnum.newBuilder()
+      // Construct using com.jiang.framework.message.MessageProto.Message.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -334,38 +334,38 @@ public final class MessageProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.jiang.framework.message.MessageProto.internal_static_messageEnum_descriptor;
+        return com.jiang.framework.message.MessageProto.internal_static_Message_descriptor;
       }
 
-      public com.jiang.framework.message.MessageProto.messageEnum getDefaultInstanceForType() {
-        return com.jiang.framework.message.MessageProto.messageEnum.getDefaultInstance();
+      public com.jiang.framework.message.MessageProto.Message getDefaultInstanceForType() {
+        return com.jiang.framework.message.MessageProto.Message.getDefaultInstance();
       }
 
-      public com.jiang.framework.message.MessageProto.messageEnum build() {
-        com.jiang.framework.message.MessageProto.messageEnum result = buildPartial();
+      public com.jiang.framework.message.MessageProto.Message build() {
+        com.jiang.framework.message.MessageProto.Message result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.jiang.framework.message.MessageProto.messageEnum buildPartial() {
-        com.jiang.framework.message.MessageProto.messageEnum result = new com.jiang.framework.message.MessageProto.messageEnum(this);
+      public com.jiang.framework.message.MessageProto.Message buildPartial() {
+        com.jiang.framework.message.MessageProto.Message result = new com.jiang.framework.message.MessageProto.Message(this);
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.jiang.framework.message.MessageProto.messageEnum) {
-          return mergeFrom((com.jiang.framework.message.MessageProto.messageEnum)other);
+        if (other instanceof com.jiang.framework.message.MessageProto.Message) {
+          return mergeFrom((com.jiang.framework.message.MessageProto.Message)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.jiang.framework.message.MessageProto.messageEnum other) {
-        if (other == com.jiang.framework.message.MessageProto.messageEnum.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.jiang.framework.message.MessageProto.Message other) {
+        if (other == com.jiang.framework.message.MessageProto.Message.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -378,11 +378,11 @@ public final class MessageProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.jiang.framework.message.MessageProto.messageEnum parsedMessage = null;
+        com.jiang.framework.message.MessageProto.Message parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.jiang.framework.message.MessageProto.messageEnum) e.getUnfinishedMessage();
+          parsedMessage = (com.jiang.framework.message.MessageProto.Message) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -392,22 +392,22 @@ public final class MessageProto {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:messageEnum)
+      // @@protoc_insertion_point(builder_scope:Message)
     }
 
     static {
-      defaultInstance = new messageEnum(true);
+      defaultInstance = new Message(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:messageEnum)
+    // @@protoc_insertion_point(class_scope:Message)
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_messageEnum_descriptor;
+    internal_static_Message_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_messageEnum_fieldAccessorTable;
+      internal_static_Message_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -417,10 +417,10 @@ public final class MessageProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\023proto/message.proto\"@\n\013messageEnum\"1\n\t" +
-      "MessageID\022\021\n\014C_USER_LOGIN\020\221N\022\021\n\014S_USER_L" +
-      "OGIN\020\222NB+\n\033com.jiang.framework.messageB\014" +
-      "MessageProto"
+      "\n\023proto/message.proto\"<\n\007Message\"1\n\tMess" +
+      "ageID\022\021\n\014C_USER_LOGIN\020\221N\022\021\n\014S_USER_LOGIN" +
+      "\020\222NB+\n\033com.jiang.framework.messageB\014Mess" +
+      "ageProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -434,11 +434,11 @@ public final class MessageProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_messageEnum_descriptor =
+    internal_static_Message_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_messageEnum_fieldAccessorTable = new
+    internal_static_Message_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_messageEnum_descriptor,
+        internal_static_Message_descriptor,
         new java.lang.String[] { });
   }
 

@@ -10,6 +10,7 @@ import com.jiang.framework.message.UserProto.S_USER_LOGIN;
 import com.jiang.framework.service.impl.GameSocketService;
 import com.jiang.framework.socket.GameMessage;
 import com.jiang.framework.socket.MessageObj;
+import com.jiang.framework.util.LogUtil;
 
 @Component
 public class UserAction {
@@ -22,6 +23,7 @@ public class UserAction {
 		byte[] bytes = sBuilder.build().toByteArray();
 		
 		MessageObj msgObj = new MessageObj(com.jiang.framework.message.MessageProto.Message.MessageID.S_USER_LOGIN_VALUE, sBuilder.build().toByteArray());
+		
 		gameSocketService.sendData(gameMessage.getConnection(), msgObj);
 	
 	}

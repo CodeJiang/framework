@@ -10,7 +10,6 @@ import com.jiang.framework.message.UserProto.S_USER_LOGIN;
 import com.jiang.framework.service.impl.GameSocketService;
 import com.jiang.framework.socket.GameMessage;
 import com.jiang.framework.socket.MessageObj;
-import com.jiang.framework.util.LogUtil;
 
 @Component
 public class UserAction {

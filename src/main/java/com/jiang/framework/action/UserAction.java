@@ -16,10 +16,9 @@ public class UserAction {
 	@Resource
 	GameSocketService gameSocketService;
 	public void login(GameMessage gameMessage) throws InvalidProtocolBufferException{
-		C_USER_LOGIN cParam = C_USER_LOGIN.parseFrom(gameMessage.getData());
+		//C_USER_LOGIN cParam = C_USER_LOGIN.parseFrom(gameMessage.getData());
 		
 		S_USER_LOGIN.Builder sBuilder = S_USER_LOGIN.newBuilder();
-		byte[] bytes = sBuilder.build().toByteArray();
 		
 		MessageObj msgObj = new MessageObj(com.jiang.framework.message.MessageProto.Message.MessageID.S_USER_LOGIN_VALUE, sBuilder.build().toByteArray());
 		

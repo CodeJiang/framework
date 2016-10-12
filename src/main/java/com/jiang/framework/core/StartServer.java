@@ -9,6 +9,7 @@ public class StartServer {
 	
 	
 	public static void start() throws InterruptedException{
+		
 		GameConfigInitService.getInstance().init();
 		
 		SpringUtil.init();

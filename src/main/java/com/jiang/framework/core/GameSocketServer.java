@@ -35,6 +35,8 @@ public class GameSocketServer {
         	serverBootstrap.option(ChannelOption.SO_BACKLOG, 1000);
         	serverBootstrap.option(ChannelOption.SO_KEEPALIVE, true);
         	serverBootstrap.option(ChannelOption.ALLOCATOR, new PooledByteBufAllocator(true));
+        	
+        	serverBootstrap.childOption(ChannelOption.TCP_NODELAY, true);
             
         	channel = serverBootstrap.bind(Config.gamePort).sync().channel();
         	channel.closeFuture().sync();

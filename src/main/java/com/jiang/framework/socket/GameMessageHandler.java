@@ -28,6 +28,7 @@ public class GameMessageHandler extends SimpleChannelInboundHandler<GameMessage>
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx) throws Exception {
 		GameSocketServer.channelGroup.remove(ctx.channel());
+		System.out.println("call this====> channelInactive");
 	};	
 	@Override
 	public void channelRegistered(ChannelHandlerContext ctx) throws Exception{

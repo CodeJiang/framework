@@ -22,7 +22,7 @@ public class GameCommandService {
 	
 	
 	public static void executeCommand(GameMessage gameMessage){
-		GameCommand command = commandMap.get(gameMessage.getMsgID() + 200);
+		GameCommand command = commandMap.get(gameMessage.getMsgID());
 		if(command != null){
 			try{
 				command.execute(gameMessage);

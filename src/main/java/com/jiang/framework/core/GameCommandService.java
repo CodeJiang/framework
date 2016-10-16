@@ -9,6 +9,11 @@ import com.jiang.framework.socket.GameMessage;
 import com.jiang.framework.util.LogUtil;
 import com.jiang.framework.util.SpringUtil;
 
+/**
+ * //只是在分支上面加点东西 命令
+ * @author Codej
+ *
+ */
 public class GameCommandService {
 	static Map<Integer, GameCommand> commandMap = new HashMap<Integer, GameCommand>(200);
 	public static void init(){

@@ -5,7 +5,6 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Component;
 
 import com.google.protobuf.InvalidProtocolBufferException;
-import com.jiang.framework.message.UserProto.C_USER_LOGIN;
 import com.jiang.framework.message.UserProto.S_USER_LOGIN;
 import com.jiang.framework.service.impl.GameSocketService;
 import com.jiang.framework.socket.GameMessage;
